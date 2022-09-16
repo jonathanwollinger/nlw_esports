@@ -1,6 +1,11 @@
 import { Image, View } from 'react-native';
+
 import logoImg from '../../assets/logo-nlw-esports.png'
-import { Heading } from '../../components/Header';
+
+import { Header } from '../../components/Heading';
+import { GameCard } from '../../components/GameCard'
+
+import { GAMES } from '../../utils/games';
 import { styles } from './styles';
 
 export function Home() {
@@ -10,10 +15,14 @@ export function Home() {
         source={logoImg}
         style={styles.logo}
       />
-      <Heading 
+      <Header 
         title="Encontre seu duo!"
         subtitle="Selecione o game que deseja jogar..."
       />
+    <GameCard 
+      data= {GAMES[0]}
+    />
+
     </View>
   );
 }
